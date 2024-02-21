@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequiredArgsConstructor
+// 테스트 해보기 위한 용도
 public class TestController {
   private final SpotifyTokenService tokenService;
 
