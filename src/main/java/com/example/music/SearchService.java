@@ -13,7 +13,6 @@ public class SearchService {
   // 변수 이름을 일관성 있게 지은다면 똑같은 타입의 Bean 객체가 만들어져도
   // 정확하게 Bean 객체를 가져올 수 있다.
   private final RestClient spotifyClient;
-  private final SpotifyTokenService tokenService;
 
   public Object search(
     String q,
@@ -34,14 +33,14 @@ public class SearchService {
 
   // 문제점 2.
   // Bearer Token 준비
-  String tokenHeaderValue
+/*  String tokenHeaderValue
 //    = "Bearer " + tokenService.getAccessToken().getAccessToken();
-    = "Bearer " + tokenService.getToken();
+    = "Bearer " + tokenService.getToken();*/
 
     return spotifyClient.get()
       .uri(url)
       // Bearer Token 넣기
-      .header("Authorization", tokenHeaderValue)
+//      .header("Authorization", tokenHeaderValue)
       .retrieve()
       .body(Object.class);
 

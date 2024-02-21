@@ -31,12 +31,15 @@ public class SpotifyTokenService {
 
   // 생성자 DI
   public SpotifyTokenService(
-    RestClient authRestClient,
     // application.yaml에 있는 설정값 가져와서 사용하기
     @Value("${spotify.client-id}") String clientId,
     @Value("${spotify.client-secret}") String clientSecret
   ) {
-    this.authRestClient = authRestClient;
+    // authRestConfig로 설정 클래스를 만들어두었으나
+    // 해당 클래스에서만 사용을 해서 생성자로 가지고 왔다.
+    this.authRestClient = RestClient.builder()
+      .baseUrl("https://accounts.spotify.com/api/token")
+      .build();;
 
     // private final MultiValueMap<String, Object> parts;을 초기화 하는 방법
     // 항상 같은 Request Body를 보내게 됨으로,
