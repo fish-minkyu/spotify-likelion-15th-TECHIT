@@ -43,9 +43,5 @@ public class SearchService {
 //      .header("Authorization", tokenHeaderValue)
       .retrieve()
       .body(Object.class);
-
-
   }
-
-
 }

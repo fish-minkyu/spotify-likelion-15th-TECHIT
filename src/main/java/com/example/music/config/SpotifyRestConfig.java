@@ -22,6 +22,4 @@ public class SpotifyRestConfig {
         .setBearerAuth(tokenService.getToken()))
       .build();
   }
-
-
 }

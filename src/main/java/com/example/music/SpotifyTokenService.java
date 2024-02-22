@@ -19,7 +19,7 @@ import java.util.Map;
 // 요청을 보낼 때, clientId와 clientSecret을 포함 시켜서 보내게끔 해주는 용도다.
 public class SpotifyTokenService {
   // Request Body가 변하지 않음으로 필드로 올리자
-  private final MultiValueMap<String, Object> parts; // 31분쯤 다시 봐보자
+  private final MultiValueMap<String, Object> parts;
 
   // 마지막으로 accessToken을 발급한 시점
   private LocalDateTime lastIssued;
