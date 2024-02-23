@@ -10,5 +10,5 @@ spring:
 
 
 spotify:
-  client-id: 00094ebdc44a465ca28bc5eb31a3e46f
-  client-secret: de558f980a7b4805add7f6f00f0913aa
+  client-id: <client-id>
+  client-secret: <client-secret>
